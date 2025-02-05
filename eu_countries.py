@@ -1,0 +1,35 @@
+"""
+A collection of ids for Countries within the EU
+"""
+
+eu_countries = {
+    40: 'Austria',
+    56: 'Belgium',
+    100: 'Bulgaria',
+    191: 'Croatia',
+    196: 'Cyprus',
+    203: 'Czech Republic',
+    208: 'Denmark',
+    233: 'Estonia',
+    246: 'Finland',
+    250: 'France',
+    276: 'Germany',
+    300: 'Greece',
+    348: 'Hungary',
+    372: 'Ireland',
+    380: 'Italy',
+    428: 'Latvia',
+    440: 'Lithuania',
+    442: 'Luxembourg',
+    470: 'Malta',
+    528: 'Netherlands',
+    616: 'Poland',
+    620: 'Portugal',
+    642: 'Romania',
+    703: 'Slovakia',
+    705: 'Slovenia',
+    724: 'Spain',
+    752: 'Sweden',
+    826: 'United Kingdom',
+    895: 'Northern Ireland',
+}

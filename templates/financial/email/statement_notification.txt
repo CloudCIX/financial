@@ -1,0 +1,12 @@
+Dear {{ user.first_name }},
+
+Please find attached a Statement of Account from {{ address.name }}.
+You are receiving this email because your username is setup in CloudCIX Financials to receive copies of credit sales transactions.
+{% if signature %}
+{{ signature|striptags }}
+
+{% endif %}
+{% if not reply_to %}
+---------------------------------------------------------------------------------------------
+This is a system generated message, please do not reply.
+{% endif %}

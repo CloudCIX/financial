@@ -1,0 +1,13 @@
+Dear {{ user.first_name }} {{ user.surname }},
+
+{{ transaction.address.name }}
+has created a new {{ transaction.transaction_type.name }}{% if transaction.contra_address.name %} for {{ transaction.contra_address.name }}{% endif %}.
+
+Your CloudCIX Membership is configured to notify you of this transaction.
+
+A PDF copy of the {{ transaction.transaction_type.name }} is attached to this email.
+
+Your transaction is also available to view through the CloudCIX Portal at {{ financial_url }}
+
+If you have not been set up to access the Financial App, please contact your administrator to give you access. Please refer to
+CloudCIX Community Docs at https://docs.cloudcix.com/part1_administration.html for reference.
