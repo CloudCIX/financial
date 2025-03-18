@@ -115,6 +115,20 @@ class TransactionMixin:
     #############################################
     #            Integer Validation             #
     #############################################
+    def _validate_integer(
+        self,
+        num: Optional[int],
+        int_error: str,
+    ) -> Optional[int]:
+        """
+        Check that an integer is an integer
+        """
+        if num is not None:
+            try:
+                num = int(cast(int, num))
+            except (TypeError, ValueError):
+                raise FinancialException(int_error)
+        return num
 
     def _validate_country_id(
             self,
@@ -264,6 +278,27 @@ class TransactionMixin:
     #############################################
     #              Date Validation              #
     #############################################
+
+    def _validate_date(self, date: Optional[str], iso_error: str) -> date:
+        try:
+            transaction_date = datetime.strptime(str(date).split('T')[0], '%Y-%m-%d').date()
+        except (TypeError, ValueError):
+            raise FinancialException(iso_error)
+        return transaction_date
+
+    def _validate_start_end_dates(
+        self,
+        start_date: datetime,
+        end_date: datetime,
+        date_error: str,
+    ) -> None:
+        """
+        Check to ensure the start_date is before the end_date
+        """
+        if start_date >= end_date:
+            raise FinancialException(date_error)
+
+        return None
 
     def _validate_transaction_date(self, date: Optional[str], iso_error: str, period_end_error: str) -> date:
         try:

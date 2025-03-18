@@ -22,4 +22,4 @@ each month. You can also set a minimum debit and credit value on these settings 
 Addresses whose outstanding balance is exceeds one of these minimum values.
 """
 
-__version__ = '4.0.0'
+__version__ = '4.0.1'

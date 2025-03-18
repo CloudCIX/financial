@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.0.1
+Date: 2025-03-18
+
+- Improved documentation
+
 ## 4.0.0
 Date: 2025-01-30
 
