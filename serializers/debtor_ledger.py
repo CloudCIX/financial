@@ -16,7 +16,8 @@ class DebtorLedgerSerializer(serpy.Serializer):
         description: The id of the Address for one of the User's Debtors
         type: integer
     balance:
-        description: The outstanding balance between the User and one of their Debtors
+        description: |
+            The outstanding balance between the User and one of their Debtors
         type: string
         format: decimal
     """

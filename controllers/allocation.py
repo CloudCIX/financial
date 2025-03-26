@@ -32,6 +32,7 @@ class AllocationListController(ControllerBase):
             'id',
         )
         search_fields = {
+            'allocation_type': (),
             'created': ControllerBase.DEFAULT_NUMBER_FILTER_OPERATORS,
             'details__nominal_ledger__contra_address_id': ('in', ),
             'details__nominal_ledger__transaction_type_id': ControllerBase.DEFAULT_NUMBER_FILTER_OPERATORS,

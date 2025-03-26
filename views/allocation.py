@@ -54,7 +54,7 @@ class AllocationCollection(APIView):
             controller.is_valid()
 
         with tracer.start_span('get_allocation_type', child_of=request.span):
-            allocation_type = request.GET.get('allocation_type', '').lower()
+            allocation_type = controller.cleaned_data['search'].pop('allocation_type', '').lower()
             if allocation_type == 'customer':
                 number = 1300
             elif allocation_type == 'supplier':

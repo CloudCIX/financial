@@ -1,9 +1,16 @@
 # CHANGELOG
 
+
+## 4.1.0
+Date: 2025-03-26
+
+- Enhancement: Streamlined how all search parameters are passed in. 
+    - For the ``Allocation`` service, changed from expecting `allocation_type` to `search[allocation_type]`
+
 ## 4.0.1
 Date: 2025-03-18
 
-- Improved documentation
+- Enhancement: Improved documentation
 
 ## 4.0.0
 Date: 2025-01-30
